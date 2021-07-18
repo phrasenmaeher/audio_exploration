@@ -12,11 +12,15 @@ import glob
 
 @st.cache
 def get_dir_overview():
-    files = glob.glob("/Users/pascal/Documents/DeepLearning/datasets/audio/ESC-50-master/audio/*.wav")
-    # %%
+    """
+    Adopt this method for the dataset at hand
+    :return:
+    """
+    #find all files
+    files = glob.glob("dataset/*.wav")
 
+    # build a label->[sample1, sample2, sample3, ...] mapping
     data = {f'{i}': [] for i in range(50)}
-
     for sample in files:
         label = sample.split("-")[-1].split(".")[0]
         data[label].append(sample)

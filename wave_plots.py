@@ -20,6 +20,8 @@ def build(data: dict, show_names: bool = False):
             st.text("")
             st.text("")
             st.markdown(f"#### Class {k}")
+        remaining_cols = [col1, col2, col3, col4, col5]
+        num_samples = len(v)
         with col1:
             y, sr, file_path = load_audio_sample(v[0])
             st.pyplot(plot_wave(y, sr))
