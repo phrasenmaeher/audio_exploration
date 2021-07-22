@@ -12,7 +12,7 @@ def main():
     data = get_dir_overview()
 
     radio1 = st.sidebar.radio(label="Choose visualization type",
-                              options=[str(i) for i in range(1, 7)], index=0,
+                              options=[str(i) for i in range(0, 7)], index=0,
                               format_func=visualization_type_format_func,
                               key="select:vistype",
                               help="Select the visualization type here")
