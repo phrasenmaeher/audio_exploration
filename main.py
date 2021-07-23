@@ -23,7 +23,7 @@ def main():
 
     bool_show_names = st.sidebar.checkbox(label="Show file names", value=False,
                                           help="If checked, shows the name of "
-                                               "the processed files below the "
+                                               "the processed files above the "
                                                "visualizations")
 
     if radio1 == "0":
